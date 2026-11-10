@@ -1,0 +1,75 @@
+:root {
+  /* ==========================================
+     1. ЦВЕТОВАЯ ПАЛИТРА (Colors из UI Kit)
+     ========================================== */
+  
+  /* Первичные / Темные цвета */
+  --color-dark-green: #08201F;
+  --color-lux-green: #0F3D3A;
+  --color-emerald-green: #1B5B56;
+  --color-black-deep: #12211F;
+  --color-black-pure: #1F1B16;
+
+  /* Золотые и бежевые оттенки */
+  --color-gold-base: #C8A45D;
+  --color-gold-light: #E6CF9A;
+  --color-gold-dark: #9A7B3C;
+  --color-gold-accent: #A6813A;
+  --color-gold-deep: #7D5F24;
+  --color-gold-muted: #B8944A;
+
+  /* Светлые / Фоновые оттенки */
+  --color-bg-cream: #F8F3EA;
+  --color-bg-main: #F5F0E6;
+  --color-sage-light: #A9B8B4;
+  --color-cream-soft: #E4DCCB;
+  --color-white: #FFFFFF;
+
+  /* Нейтральные и акцентные цвета */
+  --color-gray-medium: #6B645A;
+  --color-accent-green: #3E8E63;
+  --color-accent-red: #B23D35;
+  --color-forest-green: #2E7350;
+
+  /* ==========================================
+     2. ШРИФТЫ (Fonts)
+     ========================================== */
+  --font-primary: 'Montserrat', sans-serif;
+  --font-accent: 'Cormorant Garamond', serif;
+
+  /* ==========================================
+     3. ТИПОГРАФИКА (Typography из таблицы)
+     ========================================== */
+  /* H1 (главный экран) */
+  --font-size-h1-desktop: 56px;
+  --font-size-h1-mobile: 36px;
+
+  /* H2 (заголовки секций) */
+  --font-size-h2-desktop: 40px;
+  --font-size-h2-mobile: 28px;
+
+  /* H3 (карточки, подзаголовки) */
+  --font-size-h3-desktop: 24px;
+  --font-size-h3-mobile: 20px;
+
+  /* Основной текст */
+  --font-size-body: 16px;
+
+  /* Мелкий текст (подписи, бейджи) */
+  --font-size-small-desktop: 14px;
+  --font-size-small-mobile: 13px;
+
+  /* Кнопки */
+  --font-size-button: 14px;
+  --letter-spacing-button: 0.05em; /* 0.05 - 0.1em по макету */
+
+  /* ==========================================
+     4. МАКЕТ И СЕТКА (Layout + Container)
+     ========================================== */
+  --container-desktop: 1440px;
+  --container-tablet: 768px;
+  --container-mobile: 375px;
+  
+  --gutter-desktop: 24px;
+  --gutter-mobile: 16px;
+}
