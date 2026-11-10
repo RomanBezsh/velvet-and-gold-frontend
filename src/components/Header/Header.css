@@ -148,6 +148,246 @@
 }
 
 /* ==========================================
+   ДРОПДАУНЫ (каталог + аккаунт)
+   ========================================== */
+.header__top {
+  position: relative;
+  z-index: 20;
+}
+
+.header__container--top {
+  position: relative;
+}
+
+.header__nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.header__chevron {
+  display: inline-flex;
+  width: 18px;
+  height: 18px;
+  transition: transform 0.2s ease;
+}
+
+.header__nav-link--open .header__chevron {
+  transform: rotate(180deg);
+}
+
+/* Мега-меню каталога: 750x200, по центру страницы */
+.header__mega {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  display: flex;
+  justify-content: space-between;
+  width: 750px;
+  height: 200px;
+  padding: 18px 90px 10px;
+  background-color: var(--color-lux-green);
+  border: 1px solid var(--color-gold-base);
+}
+
+.header__mega-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 130px;
+}
+
+.header__mega-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__mega-title {
+  font-family: var(--font-accent);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  text-align: center;
+  color: var(--color-gold-light);
+}
+
+.header__mega-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header__mega-link {
+  display: block;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.3px;
+  text-align: center;
+  color: var(--color-bg-main);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.header__mega-link:hover {
+  color: var(--color-gold-light);
+}
+
+/* Панель аккаунта: 280px, прижата к правому краю контейнера */
+.header__panel {
+  position: absolute;
+  top: calc(100% + 9px);
+  right: 0;
+  z-index: 30;
+  width: 280px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-cream-soft);
+}
+
+.header__account-head {
+  padding: 16px 20px;
+}
+
+.header__account-name {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 18px;
+  color: var(--color-lux-green);
+}
+
+.header__account-email {
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--color-gray-medium);
+}
+
+.header__account-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 12px 20px;
+  list-style: none;
+  border-top: 1px solid var(--color-cream-soft);
+  border-bottom: 1px solid var(--color-cream-soft);
+}
+
+.header__account-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--color-black-pure);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.header__account-link:hover {
+  color: var(--color-gold-dark);
+}
+
+.header__account-link .header__icon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-gold-muted);
+}
+
+.header__account-count {
+  margin-left: auto;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--color-gray-medium);
+}
+
+.header__account-logout {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 20px 16px;
+  background: none;
+  border: 0;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-transform: none;
+  text-align: left;
+  color: var(--color-black-pure);
+}
+
+.header__account-logout .header__icon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-gold-muted);
+}
+
+.header__account-logout:hover {
+  color: var(--color-gold-dark);
+}
+
+/* Гостевой вариант */
+.header__guest {
+  padding: 20px;
+}
+
+.header__guest-text {
+  max-width: 184px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: var(--color-gray-medium);
+}
+
+.header__guest-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  margin-top: 16px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.header__guest-btn--primary {
+  background-color: var(--color-gold-base);
+  border-radius: 4px;
+  color: var(--color-black-deep);
+}
+
+.header__guest-btn--primary:hover {
+  background-color: var(--color-gold-dark);
+  color: var(--color-white);
+}
+
+.header__guest-btn--outline {
+  margin-top: 12px;
+  border: 1px solid var(--color-gold-accent);
+  font-size: 14px;
+  color: var(--color-gold-deep);
+}
+
+.header__guest-btn--outline:hover {
+  border-color: var(--color-gold-deep);
+}
+
+/* ==========================================
    НИЖНЯЯ ПОЛОСА — 80px (16 + 48 + 16)
    ========================================== */
 .header__bottom {
