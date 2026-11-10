@@ -1,0 +1,28 @@
+.header__logo {
+  display: inline-block;
+  line-height: 0;
+  text-decoration: none;
+}
+
+.header__logo .logo__image {
+  display: block;
+  width: 250px;
+  height: 48px;
+}
+
+.header__nav {
+    display: flex;
+    gap: 40px;
+    
+}
+
+.header__top {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--color-emerald-green);
+}
+
+a {
+  font-style: normal;
+  color: var(--color-white);
+}
