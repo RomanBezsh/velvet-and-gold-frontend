@@ -1,16 +1,17 @@
-import { useState } from "react";
-import Home from "./pages/Home";
+﻿import Home from "./pages/Home";
 import Header from "./components/Header/Header";
-import "./styles/global.css"
+import Footer from "./components/Footer/Footer";
+import { Route, Routes } from "react-router-dom";
+import "./styles/global.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="App">
-      <Header/>
-      <Home />
-
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
