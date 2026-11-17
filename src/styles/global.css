@@ -1,6 +1,6 @@
-@import './variables.css';
+﻿@import './variables.css';
 
-/* Сброс базовых отступов */
+/* ╨б╨▒╤А╨╛╤Б ╨▒╨░╨╖╨╛╨▓╤Л╤Е ╨╛╤В╤Б╤В╤Г╨┐╨╛╨▓ */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -17,10 +17,10 @@ body {
 }
 
 /* ==========================================
-   ЗАГОЛОВКИ (Применение типографики UI Kit)
+   ╨Ч╨Р╨У╨Ю╨Ы╨Ю╨Т╨Ъ╨Ш (╨Я╤А╨╕╨╝╨╡╨╜╨╡╨╜╨╕╨╡ ╤В╨╕╨┐╨╛╨│╤А╨░╤Д╨╕╨║╨╕ UI Kit)
    ========================================== */
 
-/* H1 (Главный экран) */
+/* H1 (╨У╨╗╨░╨▓╨╜╤Л╨╣ ╤Н╨║╤А╨░╨╜) */
 h1, .h1 {
   font-family: var(--font-accent);
   font-size: var(--font-size-h1-desktop);
@@ -28,7 +28,7 @@ h1, .h1 {
   line-height: 1.2;
 }
 
-/* H2 (Заголовки секций) */
+/* H2 (╨Ч╨░╨│╨╛╨╗╨╛╨▓╨║╨╕ ╤Б╨╡╨║╤Ж╨╕╨╣) */
 h2, .h2 {
   font-family: var(--font-accent);
   font-size: var(--font-size-h2-desktop);
@@ -36,7 +36,7 @@ h2, .h2 {
   line-height: 1.25;
 }
 
-/* H3 (Карточки, подзаголовки) */
+/* H3 (╨Ъ╨░╤А╤В╨╛╤З╨║╨╕, ╨┐╨╛╨┤╨╖╨░╨│╨╛╨╗╨╛╨▓╨║╨╕) */
 h3, .h3 {
   font-family: var(--font-primary);
   font-size: var(--font-size-h3-desktop);
@@ -44,14 +44,14 @@ h3, .h3 {
   line-height: 1.3;
 }
 
-/* Мелкий текст, подписи и бейджи */
+/* ╨Ь╨╡╨╗╨║╨╕╨╣ ╤В╨╡╨║╤Б╤В, ╨┐╨╛╨┤╨┐╨╕╤Б╨╕ ╨╕ ╨▒╨╡╨╣╨┤╨╢╨╕ */
 small, .text-small {
   font-size: var(--font-size-small-desktop);
   color: var(--color-gray-medium);
 }
 
 /* ==========================================
-   КНОПКИ (Buttons из UI Kit)
+   ╨Ъ╨Э╨Ю╨Я╨Ъ╨Ш (Buttons ╨╕╨╖ UI Kit)
    ========================================== */
 button, .btn {
   font-family: var(--font-primary);
@@ -59,12 +59,12 @@ button, .btn {
   font-weight: 500;
   letter-spacing: var(--letter-spacing-button);
   text-transform: uppercase;
-  border-radius: 0px; /* Для стиля Velvet & Gold */
+  border-radius: 0px; /* ╨Ф╨╗╤П ╤Б╤В╨╕╨╗╤П Velvet & Gold */
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* Основная тёмно-зелёная кнопка */
+/* ╨Ю╤Б╨╜╨╛╨▓╨╜╨░╤П ╤В╤С╨╝╨╜╨╛-╨╖╨╡╨╗╤С╨╜╨░╤П ╨║╨╜╨╛╨┐╨║╨░ */
 .btn--primary {
   background-color: var(--color-dark-green);
   color: var(--color-white);
@@ -75,7 +75,7 @@ button, .btn {
   background-color: var(--color-lux-green);
 }
 
-/* Золотая кнопка */
+/* ╨Ч╨╛╨╗╨╛╤В╨░╤П ╨║╨╜╨╛╨┐╨║╨░ */
 .btn--accent {
   background-color: var(--color-gold-base);
   color: var(--color-black-pure);
@@ -88,7 +88,7 @@ button, .btn {
 }
 
 /* ==========================================
-   АДАПТИВНОСТЬ (Мобильные размеры шрифтов)
+   ╨Р╨Ф╨Р╨Я╨в╨Ш╨Т╨Э╨Ю╨б╨в╨м (╨Ь╨╛╨▒╨╕╨╗╤М╨╜╤Л╨╡ ╤А╨░╨╖╨╝╨╡╤А╤Л ╤И╤А╨╕╤Д╤В╨╛╨▓)
    ========================================== */
 @media (max-width: 768px) {
   h1, .h1 {
