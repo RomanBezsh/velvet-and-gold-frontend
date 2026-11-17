@@ -1,7 +1,8 @@
-import React from "react";
+import HomeSections from "../components/HomeSections/HomeSections";
+import Popular from "../components/Popular/Popular";
+import Benefits from "../components/Benefits/Benefits";
+import Reviews from "../components/Reviews/Reviews";
 
-const Home = () => {
-  return <main className="home" />;
-};
-
-export default Home;
+export default function Home() {
+  return <><HomeSections /><Popular /><Benefits /><Reviews /></>;
+}
