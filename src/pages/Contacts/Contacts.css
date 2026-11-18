@@ -1,0 +1,407 @@
+﻿.contacts-page {
+  background-color: var(--color-bg-main);
+  padding: 56px 0 80px;
+}
+
+/* Контейнер 1280px внутри 1440px (боковые отступы по 80px) */
+.contacts-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (min-width: 1360px) {
+  .contacts-container {
+    padding: 0;
+  }
+}
+
+/* ==========================================
+   ХЛЕБНЫЕ КРОШКИ И ЗАГОЛОВОК
+   ========================================== */
+.contacts-breadcrumbs {
+  text-align: center;
+  font-family: var(--font-primary);
+  font-size: var(--font-size-small-desktop);
+  font-weight: 400;
+  line-height: 17px;
+  color: var(--color-gray-medium);
+  margin-bottom: 16px;
+}
+
+.contacts-breadcrumbs__link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contacts-breadcrumbs__link:hover {
+  color: var(--color-lux-green);
+}
+
+.contacts-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.contacts-intro__title {
+  font-family: var(--font-accent);
+  font-size: var(--font-size-h1-desktop);
+  font-weight: 600;
+  line-height: 68px;
+  color: var(--color-lux-green);
+}
+
+.contacts-intro__line {
+  display: block;
+  width: 100px;
+  height: 1px;
+  background-color: var(--color-gold-base);
+  margin: 16px 0 30px;
+}
+
+.contacts-intro__subtitle {
+  font-family: var(--font-primary);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.08em;
+  color: var(--color-gray-medium);
+}
+
+/* ==========================================
+   4 КАРТОЧКИ КОНТАКТОВ (1280px, gap: 24px)
+   ========================================== */
+.contacts-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.contacts-card {
+  box-sizing: border-box;
+  min-height: 191px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-cream-soft);
+  border-radius: 1px;
+  padding: 32px 16px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contacts-card__icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacts-card__label {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-small-desktop);
+  font-weight: 500;
+  line-height: 17px;
+  color: var(--color-gray-medium);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.contacts-card__value {
+  font-family: var(--font-primary);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 21px;
+  color: var(--color-lux-green);
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+a.contacts-card__value:hover {
+  color: var(--color-gold-dark);
+}
+
+.contacts-card__note {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-small-desktop);
+  font-weight: 400;
+  line-height: 17px;
+  color: var(--color-gray-medium);
+}
+
+/* ==========================================
+   НИЖНИЙ БЛОК: ФОРМА (560px) + КАРТА (560px)
+   ========================================== */
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 560px));
+  justify-content: space-between;
+  gap: 32px;
+}
+
+/* Левая карточка с формой */
+.contacts-form-card {
+  box-sizing: border-box;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-cream-soft);
+  border-radius: 4px;
+  padding: 40px;
+}
+
+.contacts-form-card__title {
+  font-family: var(--font-accent);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 39px;
+  color: var(--color-lux-green);
+}
+
+.contacts-form-card__line {
+  display: block;
+  width: 100px;
+  height: 1px;
+  background-color: var(--color-gold-base);
+  margin: 12px 0 24px;
+}
+
+.contacts-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.contacts-form__label {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-small-desktop);
+  font-weight: 500;
+  line-height: 17px;
+  color: var(--color-black-pure);
+}
+
+.contacts-form__input,
+.contacts-form__textarea {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: var(--color-white);
+  border: 1px solid #D9BF85;
+  border-radius: 4px;
+  font-family: var(--font-primary);
+  font-size: var(--font-size-body);
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--color-black-pure);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.contacts-form__input {
+  height: 48px;
+  padding: 0 16px;
+}
+
+.contacts-form__textarea {
+  height: 140px;
+  padding: 14px 16px;
+  resize: vertical;
+}
+
+.contacts-form__input::placeholder,
+.contacts-form__textarea::placeholder {
+  color: var(--color-gray-medium);
+  opacity: 1;
+}
+
+.contacts-form__input:focus,
+.contacts-form__textarea:focus {
+  border-color: var(--color-gold-base);
+}
+
+/* Кастомный чекбокс 20x20 */
+.contacts-form__checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  margin-bottom: 28px;
+  user-select: none;
+}
+
+.contacts-form__checkbox-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.contacts-form__checkbox-box {
+  position: relative;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gold-muted);
+  border-radius: 1px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.contacts-form__checkbox-input:checked + .contacts-form__checkbox-box {
+  background-color: var(--color-gold-base);
+  border-color: var(--color-gold-base);
+}
+
+.contacts-form__checkbox-input:checked + .contacts-form__checkbox-box::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--color-dark-green);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.contacts-form__checkbox-input:focus-visible + .contacts-form__checkbox-box {
+  outline: 2px solid var(--color-lux-green);
+  outline-offset: 2px;
+}
+
+.contacts-form__checkbox-text {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-body);
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--color-gray-medium);
+}
+
+/* Кнопка НАДІСЛАТИ */
+.contacts-form__submit {
+  width: 100%;
+  height: 48px;
+  background-color: var(--color-gold-base);
+  color: var(--color-dark-green);
+  border: none;
+  border-radius: 4px;
+  font-family: var(--font-primary);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.contacts-form__submit:hover {
+  background-color: var(--color-gold-dark);
+  color: var(--color-white);
+}
+
+.contacts-form__success {
+  margin-top: 14px;
+  font-size: var(--font-size-small-desktop);
+  font-weight: 500;
+  color: var(--color-accent-green);
+  text-align: center;
+}
+
+/* Правый блок с картой */
+.contacts-map-card {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 654px;
+  background-color: var(--color-bg-cream);
+  border: 1px solid var(--color-cream-soft);
+  overflow: hidden;
+}
+
+.contacts-map-card__frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 652px;
+  border: 0;
+}
+
+/* ==========================================
+   АДАПТИВНОСТЬ
+   ========================================== */
+@media (max-width: 1120px) {
+  .contacts-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contacts-grid {
+    grid-template-columns: 1fr;
+    justify-content: stretch;
+  }
+
+  .contacts-map-card,
+  .contacts-map-card__frame {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts-page {
+    padding: 36px 0 56px;
+  }
+
+  .contacts-container {
+    padding: 0 var(--gutter-mobile);
+  }
+
+  .contacts-intro {
+    margin-bottom: 32px;
+  }
+
+  .contacts-intro__title {
+    font-size: var(--font-size-h1-mobile);
+    line-height: 1.2;
+  }
+
+  .contacts-intro__line {
+    margin: 12px 0 20px;
+  }
+
+  .contacts-intro__subtitle {
+    font-size: 15px;
+    letter-spacing: 0.04em;
+  }
+
+  .contacts-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .contacts-form-card {
+    padding: 24px 16px;
+  }
+
+  .contacts-form-card__title {
+    font-size: var(--font-size-h2-mobile);
+    line-height: 1.25;
+  }
+
+  .contacts-form__checkbox-text {
+    font-size: 14px;
+  }
+
+  .contacts-form__submit {
+    font-size: 16px;
+  }
+}
