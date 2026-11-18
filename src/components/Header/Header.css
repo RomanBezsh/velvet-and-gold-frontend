@@ -3,17 +3,11 @@
   z-index: 10;
 }
 
-/* ==========================================
-   ОБЩИЙ КОНТЕЙНЕР (1280, поля 80 на 1440)
-   ========================================== */
 .header__container {
   width: min(1280px, calc(100% - 48px));
   margin-inline: auto;
 }
 
-/* ==========================================
-   ВЕРХНЯЯ ПОЛОСА — 88px
-   ========================================== */
 .header__top {
   background-color: var(--color-emerald-green);
   border-bottom: 1px solid var(--color-lux-green);
@@ -40,7 +34,6 @@
   height: 48px;
 }
 
-/* Меню */
 .header__nav {
   display: flex;
   align-items: center;
@@ -76,7 +69,6 @@
   height: 18px;
 }
 
-/* Иконки + язык */
 .header__actions {
   display: flex;
   align-items: center;
@@ -147,9 +139,6 @@
   color: var(--color-gold-light);
 }
 
-/* ==========================================
-   ДРОПДАУНЫ (каталог + аккаунт)
-   ========================================== */
 .header__top {
   position: relative;
   z-index: 20;
@@ -175,7 +164,6 @@
   transform: rotate(180deg);
 }
 
-/* Мега-меню каталога: 750x200, по центру страницы */
 .header__mega {
   position: absolute;
   top: 100%;
@@ -239,7 +227,6 @@
   color: var(--color-gold-light);
 }
 
-/* Панель аккаунта: 280px, прижата к правому краю контейнера */
 .header__panel {
   position: absolute;
   top: calc(100% + 9px);
@@ -338,7 +325,6 @@
   color: var(--color-gold-dark);
 }
 
-/* Гостевой вариант */
 .header__guest {
   padding: 20px;
 }
@@ -387,9 +373,6 @@
   border-color: var(--color-gold-deep);
 }
 
-/* ==========================================
-   НИЖНЯЯ ПОЛОСА — 80px (16 + 48 + 16)
-   ========================================== */
 .header__bottom {
   background-color: var(--color-bg-main);
   border-bottom: 1px solid var(--color-sage-light);
@@ -426,7 +409,6 @@
   color: var(--color-gold-dark);
 }
 
-/* Поиск 480x48 + кнопка 148x48, зазор 40 */
 .header__search {
   display: flex;
   align-items: center;
@@ -518,9 +500,6 @@
   color: var(--color-white);
 }
 
-/* ==========================================
-   АДАПТИВНОСТЬ
-   ========================================== */
 @media (max-width: 1279px) {
   .header__nav {
     gap: 28px;
