@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './About.css';
 import aboutTeamPhoto from '../../assets/about-team.png';
 
@@ -15,7 +16,7 @@ const principles = [
 export default function About() {
   return <main className="about-page">
     <div className="about-container">
-      <nav className="about-breadcrumbs" aria-label="Навігаційний шлях"><a href="/">Головна</a> / Про нас</nav>
+      <nav className="about-breadcrumbs" aria-label="Навігаційний шлях"><Link to="/">Головна</Link> / Про нас</nav>
       <header className="about-intro"><h1>Про нас</h1><span className="about-line"/><p>Прикраси, створені з любов’ю до деталей</p></header>
       <section className="about-story" aria-labelledby="about-story-heading">
         <div className="about-story-copy"><h2 id="about-story-heading">Наша історія</h2><span className="about-line"/><p>Velvet &amp; Gold народився з любові до справжніх прикрас, що передаються з покоління в покоління. Ми обираємо золото 585 проби та ретельно перевіряємо кожен виріб.</p><p>Наша мета — зробити вибір прикрас простим і приємним.</p></div>
@@ -24,7 +25,7 @@ export default function About() {
     </div>
     <section className="about-stats" aria-label="Наші досягнення"><div className="about-stats-inner"><div><strong>10+</strong><span>РОКІВ ДОСВІДУ</span></div><div><strong>5000+</strong><span>КЛІЄНТІВ</span></div><div><strong>585</strong><span>ПРОБА ЗОЛОТА</span></div><div><strong>14 ДНІВ</strong><span>НА ПОВЕРНЕННЯ</span></div></div></section>
     <div className="about-container"><section className="about-principles" aria-labelledby="principles-heading"><h2 id="principles-heading">Наші принципи</h2><span className="about-line"/><div className="about-principles-grid">{principles.map(({title,description,Icon}) => <article className="about-principle" key={title}><Icon/><h3>{title}</h3><p>{description}</p></article>)}</div></section>
-      <section className="about-cta"><div><h2>Знайдіть прикрасу, яка розповість<br className="about-desktop-break"/> вашу історію</h2><a href="/#categories">ДИВИТИСЯ КАТАЛОГ</a></div></section>
+      <section className="about-cta"><div><h2>Знайдіть прикрасу, яка розповість<br className="about-desktop-break"/> вашу історію</h2><Link to="/#categories">ДИВИТИСЯ КАТАЛОГ</Link></div></section>
     </div>
   </main>;
 }

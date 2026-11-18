@@ -10,6 +10,7 @@ import accountIcon from "../../assets/icons/account.svg?raw";
 import ordersIcon from "../../assets/icons/orders.svg?raw";
 import favMenuIcon from "../../assets/icons/heart.svg?raw";
 import logoutIcon from "../../assets/icons/logout.svg?raw";
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 const Icon = ({ svg }) => (
@@ -121,9 +122,9 @@ const Header = () => {
     <header className="header">
       <div className="header__top">
         <div className="header__container header__container--top">
-          <a href="/" className="header__logo" aria-label="Velvet & Gold — на головну">
+          <Link to="/" className="header__logo" aria-label="Velvet & Gold — на головну">
             <Logo />
-          </a>
+          </Link>
 
           <nav className="header__nav" aria-label="Головна навігація">
             <div
@@ -131,8 +132,8 @@ const Header = () => {
               onMouseEnter={() => openDropdownNow("catalog")}
               onMouseLeave={closeDropdownSoon}
             >
-              <a
-                href="/catalog"
+              <Link
+                to="/catalog"
                 className={`header__nav-link header__nav-link--dropdown${isCatalogOpen ? " header__nav-link--open" : ""}`}
                 aria-expanded={isCatalogOpen}
                 aria-haspopup="true"
@@ -142,7 +143,7 @@ const Header = () => {
                 <span className="header__chevron">
                   <Icon svg={chevronIcon} />
                 </span>
-              </a>
+              </Link>
 
               {isCatalogOpen && (
                 <div className="header__mega" role="menu" aria-label="Каталог">
@@ -156,14 +157,14 @@ const Header = () => {
                           <ul className="header__mega-list">
                             {block.links.map((link) => (
                               <li key={link.slug}>
-                                <a
-                                  href={`/catalog/${link.slug}`}
+                                <Link
+                                  to={`/catalog/${link.slug}`}
                                   className="header__mega-link"
                                   role="menuitem"
                                   onClick={closeDropdown}
                                 >
                                   {link.label}
-                                </a>
+                                </Link>
                               </li>
                             ))}
                           </ul>
@@ -175,20 +176,20 @@ const Header = () => {
               )}
             </div>
 
-            <a
-              href="/about"
+            <Link
+              to="/about"
               className="header__nav-link"
               onMouseEnter={closeDropdown}
             >
               ПРО НАС
-            </a>
-            <a
-              href="/contacts"
+            </Link>
+            <Link
+              to="/contacts"
               className="header__nav-link"
               onMouseEnter={closeDropdown}
             >
               КОНТАКТИ
-            </a>
+            </Link>
           </nav>
 
           <div className="header__actions">
@@ -225,23 +226,23 @@ const Header = () => {
                       </div>
                       <ul className="header__account-menu">
                         <li>
-                          <a href="/account" className="header__account-link" onClick={closeDropdown}>
+                          <Link to="/account" className="header__account-link" onClick={closeDropdown}>
                             <Icon svg={accountIcon} />
                             <span>Особистий кабінет</span>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="/orders" className="header__account-link" onClick={closeDropdown}>
+                          <Link to="/orders" className="header__account-link" onClick={closeDropdown}>
                             <Icon svg={ordersIcon} />
                             <span>Мої замовлення</span>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="/favorites" className="header__account-link" onClick={closeDropdown}>
+                          <Link to="/favorites" className="header__account-link" onClick={closeDropdown}>
                             <Icon svg={favMenuIcon} />
                             <span>Обране</span>
                             <span className="header__account-count">{MOCK_USER.favorites}</span>
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                       <button
@@ -258,12 +259,12 @@ const Header = () => {
                       <p className="header__guest-text">
                         Увійдіть, щоб бачити замовлення та зберігати обране
                       </p>
-                      <a href="/login" className="header__guest-btn header__guest-btn--primary">
+                      <Link to="/login" className="header__guest-btn header__guest-btn--primary">
                         УВІЙТИ
-                      </a>
-                      <a href="/register" className="header__guest-btn header__guest-btn--outline">
+                      </Link>
+                      <Link to="/register" className="header__guest-btn header__guest-btn--outline">
                         СТВОРИТИ АКАУНТ
-                      </a>
+                      </Link>
                     </div>
                   )}
                 </div>
@@ -292,15 +293,15 @@ const Header = () => {
       <div className="header__bottom">
         <div className="header__container header__container--bottom">
           <nav className="header__subnav" aria-label="Категорії">
-            <a href="/new" className="header__subnav-link">
+            <Link to="/new" className="header__subnav-link">
               НОВИНКИ
-            </a>
-            <a href="/promotions" className="header__subnav-link">
+            </Link>
+            <Link to="/promotions" className="header__subnav-link">
               АКЦІЇ
-            </a>
-            <a href="/wedding" className="header__subnav-link">
+            </Link>
+            <Link to="/wedding" className="header__subnav-link">
               ВЕСІЛЬНА КОЛЕКЦІЯ
-            </a>
+            </Link>
           </nav>
 
           <form className="header__search" role="search" onSubmit={(e) => e.preventDefault()}>

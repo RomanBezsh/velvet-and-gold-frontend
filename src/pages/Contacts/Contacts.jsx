@@ -1,4 +1,5 @@
 ﻿import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Contacts.css';
 
 import phoneIcon from '../../assets/icons/phone.svg?raw';
@@ -79,7 +80,7 @@ export default function Contacts() {
     <main className="contacts-page">
       <div className="contacts-container">
         <nav className="contacts-breadcrumbs" aria-label="Хлібні крихти">
-          <a href="/" className="contacts-breadcrumbs__link">Головна</a>
+          <Link to="/" className="contacts-breadcrumbs__link">Головна</Link>
           <span className="contacts-breadcrumbs__sep"> / </span>
           <span>Контакти</span>
         </nav>
