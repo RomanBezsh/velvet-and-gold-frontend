@@ -1,5 +1,5 @@
 import './About.css';
-import aboutTeamPhoto from '../assets/about-team.png';
+import aboutTeamPhoto from '../../assets/about-team.png';
 
 const Diamond = () => <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 17h32l-16 22L8 17Zm0 0 8-9h16l8 9M16 8l8 31 8-31M8 17h32M16 8l8 9 8-9"/></svg>;
 const Scale = () => <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 7v32M12 40h24M16 11h16M8 15h32M12 15 5 29h14l-7-14Zm24 0-7 14h14l-7-14ZM5 29c2 5 12 5 14 0m10 0c2 5 12 5 14 0"/></svg>;
