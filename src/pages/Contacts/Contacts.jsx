@@ -191,8 +191,10 @@ export default function Contacts() {
             <iframe
               className="contacts-map-card__frame"
               title="Velvet & Gold — вул. Прикладна, 10"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=30.514%2C50.443%2C30.534%2C50.453&layer=mapnik&marker=50.448%2C30.524"
+              src="https://maps.google.com/maps?q=50.448%2C30.524&z=15&output=embed"
               loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
             />
           </div>
         </section>
